@@ -1,0 +1,67 @@
+{
+  "name": "Menu-simple",
+  "items": [
+    {
+      "link_name": "Acceuil",
+      "icon": "fas fa-home",
+      "href": "https://www.bing.com/ "
+    },
+    {
+      "link_name": "Metrics",
+      "icon": "fas fa-chart-pie",
+      "href": "https://www.yahoo.com/ "
+    },
+    {
+      "link_name": "Live Tail",
+      "icon": "fas fa-satellite-dish",
+      "href": "https://www.bing.com/ "
+    },
+    {
+      "link_name": "Send your Data",
+      "icon": "fab fa-telegram-plane",
+      "href": "https://www.bing.com/ "
+    },
+    {
+      "id_menu": 1,
+      "link_name ": "Alerts & Events ",
+      "icon": "far fa-bell",
+      "href": "https://www.bing.com/ ",
+      "submenu": [
+        {
+          "href": "https://www.bing.com/",
+          "text": "News alert"
+        },
+        {
+          "href": "#",
+          "text": "Alert definitions"
+        },
+        {
+          "href": "#",
+          "text": "Triggered alerts"
+        },
+        {
+          "href": "#",
+          "text": "Optimizer definitions"
+        },
+        {
+          "href": "#",
+          "text": "Reports"
+        },
+        {
+          "href": "#",
+          "text": "Alert endpoints"
+        }
+      ]
+    },
+    {
+      "link_name": "Insights",
+      "icon": "far fa-eye",
+      "href": "href "
+    },
+    {
+      "link_name": "ELK Apps",
+      "icon": "fas fa-layer-group",
+      "href": "https://www.google.com/ "
+    }
+  ]
+}

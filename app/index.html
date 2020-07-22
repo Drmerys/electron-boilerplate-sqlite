@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
+<head>
+    <title>Verticale</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/vertical.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<!--<header>
+    <nav class="navbar navbar-dark indigo">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <form class="form-inline my-1">
+        <div class="md-form form-sm my-0">
+          <input class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+            aria-label="Search">
+        </div>
+        <button class="btn btn-outline-white btn-sm my-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+</header> -->
+
   <body>
-    <h1>electron-boilerplate-sqlite</h1>
+
+    <div class="wrapper">
+      <div class="sidebar">
+          <h2>Vertical Menu</h2>
+          <ul>
+              <li><a href="#"><i class="fas fa-home"></i>&ensp;Accueil</a></li>
+              <li><a href="#"><i class="fas fa-chart-pie"></i>&ensp;Metrics</a></li>
+              <li><a href="#"><i class="fas fa-satellite-dish"></i>&ensp;Live Tail</a></li>
+              <li><a href="#"><i class="fab fa-telegram-plane"></i>&ensp;Send you Data</a></li>
+              <li><a href="#"><i class="far fa-bell"></i>&ensp;Alerts & Events</a></li>
+              <li><a href="#"><i class="far fa-eye"></i>&ensp;Insights</a></li>
+              <li><a href="#"><i class="fas fa-layer-group"></i>&ensp;ELK Apps</a></li>
+          </ul>
+          <div class="social_media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="main_content">
+          <div class="header">Welcome!! Have a nice day.</div>
+          <div class="info">
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        </div>
+      </div>
+  </div>
+
+
+    <h1>Opinaka</h1>
     <ul id="database">
     </ul>
     <script>
       var sqlite3 = require('sqlite3').verbose();
-      var db = new sqlite3.Database(':memory:');
+      var db = new sqlite3.Database('app_menu.db');
 
       db.serialize(function() {
-        db.run("CREATE TABLE lorem (info TEXT)");
-
-        var stmt = db.prepare("INSERT INTO lorem VALUES (?)");
-        for (var i = 0; i < 10; i++) {
-          stmt.run("Ipsum " + i);
-        }
-
-        stmt.finalize();
-
         var rows = document.getElementById("database");
-        db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
+        db.each("SELECT * FROM apps WHERE id_app = id_menu ORDER BY id_app DESC", function(err, row) {
           var item = document.createElement("li");
-          item.textContent = "" + row.id + ": " + row.info;
+          item.textContent = "id app : " + row.id_app + " name app: " + row.name_app + " id menu : " + row.id_menu + " : " + row.url_menu + " url menu : " + row.url_menu;
           rows.appendChild(item);
         });
       });
 
       db.close();
     </script>
+
   </body>
 </html>
+
+

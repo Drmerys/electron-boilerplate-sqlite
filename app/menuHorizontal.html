@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Horizontale</title>
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+</head>
+
+
+</ul>
+
+<header>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="menuHorizontal.html"> Opinaka </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <ul id="menu1" class="navbar-nav mr-auto"></ul><br>
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto" style="display: none;">
+        <li class="nav-item active">
+          <a class="nav-link" href="menuHorizontal.html" id="database"> <i class="fas fa-home"></i>&ensp;
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- <i class="fab fa-facebook-f"></i> -->
+          <a class="nav-link" href="#"><i class="fas fa-chart-pie"></i>&ensp;Metrics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-satellite-dish"></i>&ensp;Live Tail</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fab fa-telegram-plane"></i>&ensp;Send you Data</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"><i class="far fa-bell"></i>&ensp;Alerts & Events</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="index.html">News alert</a>
+            <a class="dropdown-item" href="index.html">Alert definitions</a>
+            <a class="dropdown-item" href="index.html">Optimizer definitions</a>
+            <a class="dropdown-item" href="index.html">Reports</a>
+            <a class="dropdown-item" href="index.html">Alert endpoints</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="far fa-eye"></i>&ensp;Insights</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-layer-group"></i>&ensp;ELK Apps</a>
+        </li>
+
+      </ul>
+      <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+  </nav>
+  <!--/.Navbar-->
+</header>
+
+<body>
+  <h1>Horizontale</h1>
+
+
+  <!--<div class="iframe">
+      <iframe id="inlineFrameExample"
+        title="Inline Frame Example"
+        width="800"
+        height="600"
+        src="index.html">
+      </iframe>
+
+    </div>-->
+
+  <div class="dm">
+    <h2 class="dm__heading">
+      <span>
+        Applications Disponibles <span class="dm__number"></span>
+      </span>
+      <button class="ion-ios-plus-outline dm__add"></button>
+    </h2>
+    <ul class="dm__list">
+      <li class="dm__item">
+        <script type="text/javascript" src="renderer.js"></script>
+        <button class="dm__button" onClick="Javascript:window.open('http://www.gmail.com','_parent');">
+          <span>Gmail</span>
+        </button>
+      </li>
+    </ul>
+
+    <ul class="dm__list">
+      <li class="dm__item">
+        <script type="text/javascript" src="renderer.js"></script>
+        <button class="dm__button" onClick="Javascript:window.open('https://www.amazon.com/','_parent');">
+          <span>Amazon</span>
+        </button>
+      </li>
+    </ul>
+
+    <ul class="dm__list">
+      <li class="dm__item">
+        <script type="text/javascript" src="renderer.js"></script>
+        <button class="dm__button" onClick="Javascript:window.open('https://fr.yahoo.com','_parent');">
+          <span>Yahoo</span>
+        </button>
+      </li>
+    </ul>
+
+  </div>
+
+  <script>
+    //itemMenu();
+  </script>
+
+
+</body>
+
+</html>

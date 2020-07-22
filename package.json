@@ -23,6 +23,8 @@
     "release": "build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.0",
     "sqlite3": "^4.0.9"
   },
   "devDependencies": {
